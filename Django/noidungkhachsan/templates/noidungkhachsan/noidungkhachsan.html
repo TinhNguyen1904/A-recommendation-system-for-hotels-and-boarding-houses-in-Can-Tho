@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Nội dung</title>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script type="text/javascript" src="{% static 'noidungkhachsan/distND/slick.js' %}"></script>
+     <script type="text/javascript" src="{% static 'noidungkhachsan/distND/jquery.scrollUp.js' %}"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="css/main.css">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'noidungkhachsan/cssND/slick.css' %}">
+	<!-- ******************************************************************************* -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'noidungkhachsan/cssND/datepicker.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'noidungkhachsan/slickND/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'noidungkhachsan/slickND/slick-theme.css' %}"/>
+    <link rel="stylesheet" href="{% static 'noidungkhachsan/cssND/templatemo-style.css' %}">
+	<!-- ******************************************************************************* -->
+
+<!--    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">-->
+
+
+         <script type="text/javascript" src="{% static 'noidungkhachsan/distND/demo.js' %}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CTU</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="{% static 'noidungkhachsan/img/favicon.ico' %}" type="image/x-icon">
+<link rel="apple-touch-icon" href="{% static 'noidungkhachsan/img/apple-touch-icon.png' %}">
+<link rel="apple-touch-icon" sizes="72x72" href="{% static 'noidungkhachsan/img/apple-touch-icon-72x72.png' %}">
+<link rel="apple-touch-icon" sizes="114x114" href="{% static 'noidungkhachsan/img/apple-touch-icon-114x114.png' %}">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="{% static 'noidungkhachsan/cssND/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'noidungkhachsan/fontsND/font-awesome/css/font-awesome.css' %}">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="{% static 'noidungkhachsan/cssND/styleKS.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'noidungkhachsan/cssND/nivo-lightbox/nivo-lightbox.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'noidungkhachsan/cssND/nivo-lightbox/default.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <style type="text/css">
+/*-------------------------------------
+        8. Packages
+--------------------------------------*/
+.packages{
+
+}
+.packages-content{
+    margin-top:15px;
+	width: 310%;
+}
+.container{
+	text-align: center;
+}
+/*single-package-item */
+.single-package-item{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    -webkit-transition: .5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+    transition: .5s;
+}
+.single-package-item-txt{
+    padding: 0 25px;
+}
+.single-package-item img {
+    width: 100%;
+
+}
+.single-package-item h3{
+    position: relative;
+    font-size: 20px;
+    color: #565a5c;
+    font-weight:500;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0;
+}
+.single-package-item h3:after{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ebebeb;
+}
+.packages-para{
+
+    text-transform: capitalize;
+}
+.packages-para p{
+    font-size: 14px;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+.packages-para p span{
+    width: 150px;
+}
+.packages-review p i{
+    color: #ffdf00;
+    font-size: 16px;
+}
+.packages-review span{
+
+    font-size: 14px;
+    color: #aaa;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+.about-view.packages-btn{
+    width: 110px;
+    height: 35px;
+    font-size: 14px;
+    color: #fff;
+    text-transform: capitalize;
+    -webkit-transition: .5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+    transition: .5s;
+
+}
+.about-view.packages-btn:hover{
+    box-shadow: 0 5px 20px rgba(14,15,18,.3);
+}
+.single-package-item:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+/*single-package-item */
+        </style>
+
+<style>
+input[type=text], select, textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: medium;
+}
+
+input[type=submit] {
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  float: right;
+  font-size: medium;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+}
+
+.col-75 {
+  width: 110%;
+
+}
+</style>
+
+<style type="text/css">
+        .pagination {
+            padding: 5px;
+            font-size: large;
+            font-weight: bold;
+        }
+</style>
+
+</head>
+
+<body >
+	<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a> <img src="{% static 'noidungkhachsan/imagesND/ctu.png' %}" alt="Site logo" width="80" height="80"></a> </div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#about" class="page-scroll">GIỚI THIỆU</a></li>
+				<li><a href="#restaurant-menu" class="page-scroll">NỔI BẬT</a></li>
+				<li><a href="#call-reservation" class="page-scroll">LIÊN HỆ</a></li>
+				<!--<li><a href="file:///D:/Luan%20Van/Web/DangKy-dangNhap/DangNhapDangKy.html" class="page-scroll">ĐĂNG NHẬP</a></li>-->
+				<li><a href="{% url 'LogoutMemberUser:logoutUser' %}" class="page-scroll">ĐĂNG XUẤT</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+    <header class="tm-header">
+        <nav class="tm-nav" >
+			<div>
+				<h1>{{Hotel.hotel_name}}</h1>
+				<p>{{Hotel.hotel_address}}</p>
+                <a href="https://www.google.com/maps/@10.0353212,105.7205709,13z?hl=vi-VN"><p>Chỉ dẫn trên Google map</p></a>
+			</div>
+        </nav>
+    </header>
+
+        <section class="tm-imgslider">
+					<div>
+                        <div class="tm-slider"><img class="tm-sliderimage" src="{% static Hotel.hotel_image %}" height="550" alt="Majestic Hotel">
+                            <div class="tm-slidertext">
+                                <p class="bold">
+                            </div>
+                        </div>
+                    </div>
+	    </section>
+
+
+             <div>
+                 <p>{{Hotel.hotel_content}}</p>
+            </div>
+
+    <section class="tm-servicesection">
+
+        <div class="tm-service">
+              <img class="tm-serimage" src="{% static 'noidungkhachsan/imagesND/car-front.png' %}">
+             <div>
+                 <p class="b">Khách sạn</p>
+                 <p>Giá: {{Hotel.hotel_price}} USD</p>
+                 <p>Giá khuyến mãi: {{Hotel.hotel_price_free}} USD</p>
+                 <p>Tọa lạc: {{Hotel.hotel_location}}</p>
+                 <p>{{Hotel.hotel_distance}}</p>
+             </div>
+        </div>
+        <div class="tm-service">
+              <img class="tm-serimage" src="{% static 'noidungkhachsan/imagesND/spa.png' %}">
+					<div>
+                        <p class="b">Đánh giá</p>
+                        <p>Thuộc top khách sạn: {{Hotel.title_rating}}</p>
+						<p>Đánh giá: {{Hotel.hotel_rating}}/10 </p>
+						<p>Lượt đánh giá: {{Hotel.nunber_rating}} reviews</p>
+					</div>
+        </div>
+
+    </section>
+
+
+<div class="container">
+				<div class="gallary-header text-center">
+					<h2>
+						Các loại phòng của khách sạn
+					</h2>
+				</div><!--/.gallery-header-->
+</div>
+<table style="width:100%">
+  <tr>
+    <th>Phòng Tiêu chuẩn giường đôi (Standard Double Room)</th>
+    <th>Phòng Tiêu chuẩn 2 giường (Standard Twin Room)</th>
+    <th>Phòng Gia đình (Family Room)</th>
+  </tr>
+  <tr>
+    <th>
+	<div class="packages-content">
+					<div class="row">
+
+						<div class="col-md-4 col-sm-6">
+
+							<div class="single-package-item">
+								<img src="{% static 'noidungkhachsan/imagesND/giuongdoi.jpg' %}" alt="package-place">
+
+								<div class="single-package-item-txt">
+
+									<div class="packages-para">
+										<p>Đặt không cần thẻ tín dụng</p>
+										<p>Thanh toán tại nơi ở</p>
+                                        <p>Giá cực thấp! (không hoàn tiền)</p>
+									</div>
+									<div class="packages-review" >
+										<p>
+											<span style="color:Blue;">Giá: {{Hotel.hotel_price}} USD</span>
+										</p>
+									</div><!--/.packages-review-->
+									<!--<div class="about-btn">
+										<a href="http://127.0.0.1:8000/datphong/{{Hotel.hotel_id}}"><button  class="about-view packages-btn" style="color:Red;" >
+											Đặt phòng
+                                        </button></a>
+									</div>--><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+					</div><!--/.row-->
+				</div><!--/.packages-content-->
+
+			</div><!--/.container-->
+	</th>
+
+    <th>
+	<div class="packages-content">
+					<div class="row">
+
+						<div class="col-md-4 col-sm-6">
+
+							<div class="single-package-item">
+								<img src="{% static 'noidungkhachsan/imagesND/2giuong.jpg' %}" alt="package-place">
+
+								<div class="single-package-item-txt">
+
+									<div class="packages-para">
+										<p>Đặt không cần thẻ tín dụng</p>
+										<p>Thanh toán tại nơi ở</p>
+                                        <p>Giá cực thấp! (không hoàn tiền)</p>
+									</div>
+									<div class="packages-review">
+										<p>
+											<span style="color:Blue;">Giá: {{Hotel.hotel_price}} USD</span>
+										</p>
+									</div><!--/.packages-review-->
+									<!--<div class="about-btn">
+										<a href="http://127.0.0.1:8000/datphong/{{Hotel.hotel_id}}"><button  class="about-view packages-btn" style="color:Red;" >
+											Đặt phòng
+                                        </button></a>
+									</div>--><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+					</div><!--/.row-->
+				</div><!--/.packages-content-->
+
+			</div><!--/.container-->
+	</th>
+
+    <th>
+	<div class="packages-content">
+					<div class="row">
+
+						<div class="col-md-4 col-sm-6">
+
+							<div class="single-package-item">
+								<img src="{% static 'noidungkhachsan/imagesND/giadinh.jpg' %}" alt="package-place">
+
+								<div class="single-package-item-txt">
+
+									<div class="packages-para">
+										<p>Đặt không cần thẻ tín dụng</p>
+										<p>Thanh toán tại nơi ở</p>
+                                        <p>Giá cực thấp! (không hoàn tiền)</p>
+									</div>
+									<div class="packages-review">
+										<p>
+											<span style="color:Blue;">Giá: {{Hotel.hotel_price}} USD</span>
+										</p>
+									</div><!--/.packages-review-->
+									<!--<div class="about-btn">
+										<a href="http://127.0.0.1:8000/datphong/{{Hotel.hotel_id}}"><button  class="about-view packages-btn" style="color:Red;" >
+											Đặt phòng
+                                        </button></a>
+									</div>--><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+					</div><!--/.row-->
+				</div><!--/.packages-content-->
+
+			</div><!--/.container-->
+	</th>
+  </tr>
+</table>
+
+<section class="tm-makeres">
+    <div class="tm-res">
+       <div>
+           <h2 style="color:red">Những bình luận về khách sạn</h2>
+       </div>
+    </div>
+</section>
+{% for CommentHotel in cmt %}
+    <section class="tm-reviewsection">
+        <div class="tm-review ">
+            <div class="tm-revcon">
+                <p class="b"> {{CommentHotel.author}}</p>
+                <div>
+                    <p> {{CommentHotel.ratingstar}} Star</p>
+                    <p> {{CommentHotel.body1}} </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}
+{% for ReviewsHotel in views %}
+    <section class="tm-reviewsection">
+        <div class="tm-review ">
+            <div class="tm-revcon">
+                <p class="b"> {{ReviewsHotel.hotel_user}}</p>
+                <div>
+                    <p> {{ReviewsHotel.cmd_rating}} Star</p>
+                    <p> {{ReviewsHotel.cmd_content}} </p>
+                </div>
+			</div>
+        </div>
+    </section>
+{% endfor %}
+
+
+
+ <!-- Phan trang - moi trang 5 nha tro -->
+            <div class="pagination">
+                <span class="step-links">
+                    {% if views.has_previous %}
+                        <a href="?page=1">&laquo; Trang đầu tiên</a>
+                        <a href="?page={{ views.previous_page_number }}">Về trước</a>
+                    {% endif %}
+
+                    <span class="current">
+                        {{ views.number }}
+                    </span>
+
+                    {% if views.has_next %}
+                        <a href="?page={{ views.next_page_number }}">Kế tiếp</a>
+                        <a href="?page={{ views.paginator.num_pages }}">Trang cuối cùng &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+
+
+     <form action="" method="POST">
+         {% csrf_token%}
+        <div class="tm-review ">
+            <h3>Bạn có thể bình luận ở đây</h3>
+            <h3> Đánh giá {{form.ratingstar}} Star</h3>
+            <div class="row">
+                <div class="col-75">
+                   {{form.body1}}
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Xác nhận">
+            </div>
+        </div>
+     </form>
+<!-- end comment-->
+
+
+    <section class="tm-makeres">
+    	<div class="tm-res">
+       		<div class="tm-resbutton">
+           		<a href="http://127.0.0.1:8000/booking/{{Hotel.hotel_id}}"> <p>ĐẶT PHÒNG NGAY</p></a>
+        	</div>
+        </div>
+    </section>
+
+
+         <!--<div class="tm-rooms">
+             <img  src="{% static Hotel.hotel_image %}">
+             <a href="http://127.0.0.1:8000/noidungkhachsan/{{Hotel.hotel_id}}"> <p class="s">{{Hotel.hotel_name}}</p> </a>
+             <p>Giá: {{Hotel.hotel_price}} USD</p>
+             <p>Giá: {{Hotel.hotel_price_free}} USD</p>
+         </div>-->
+
+
+    <!--<div class="tm-container-outer tm-position-relative" id="tm-section-4">
+				<div id="google-map" method="post"></div>
+
+				<form action="" method="get" class="tm-search-form tm-section-pad-2">
+					<div class="form-row tm-search-form-row">
+
+					<div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
+						<label for="inputCheckIn"></label>
+						<input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="">
+					</div>
+					<div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
+						<label for="inputCheckOut"></label>
+						<input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="">
+					</div>
+
+					</div>
+				</form>
+    </div>-->
+
+    <footer class="tm-footer">
+        <div class="tm-us">
+        <p class="bold">Giới thiệu</p>
+        <p>Chúng tôi là một phần của chuỗi các khách sạn sang trọng
+		mở rộng khắp nơi trên thế giới. Chúng tôi cung cấp
+		một kỳ nghỉ sang trọng với nhiều giá trị gia tăng
+		và dịch vụ miễn phí sẽ khiến bạn phải
+		ghé thăm chúng tôi nhiều lần.</p>
+        </div>
+
+        <div class="tm-address">
+        <p class="bold">Liên hệ</p>
+        <p>	Phone : (84-292) 3832663</p>
+		<p>	Email : dhct@ctu.edu.vn</p>
+		<p>	Fax: (84-292) 3838474</p>
+        </div>
+        <br/>
+    <div class="tm-media">
+        <a href="#"> <img src="{% static 'noidungkhachsan/imagesND/fb.png' %}"></a>
+        <a href="#"> <img src="{% static 'noidungkhachsan/imagesND/G.png' %}"> </a>
+        <a href="#"> <img src="{% static 'noidungkhachsan/imagesND/twittr.png' %}"> </a>
+        <a href="#">  <img src="{% static 'noidungkhachsan/imagesND/insta.png' %}"> </a>
+
+        </div>
+
+<!--    <a  href="#top">  <img class="tm-up" src="images/up.png"> </a>-->
+
+
+    </footer>
+
+     <!-- load JS files -->
+    <script src="{% static 'noidungkhachsan/js/jquery-1.11.3.min.js' %}"></script>             <!-- jQuery (https://jquery.com/download/) -->
+    <script src="{% static 'noidungkhachsan/js/popper.min.js' %}"></script>                    <!-- https://popper.js.org/ -->
+    <script src="{% static 'noidungkhachsan/js/bootstrap.min.js' %}"></script>                 <!-- https://getbootstrap.com/ -->
+    <script src="{% static 'noidungkhachsan/js/datepicker.min.js' %}"></script>                <!-- https://github.com/qodesmith/datepicker -->
+    <script src="{% static 'noidungkhachsan/js/jquery.singlePageNav.min.js' %}"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+    <script src="{% static 'noidungkhachsan/slickND/slick.min.js' %}"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
+    <script src="{% static 'noidungkhachsan/js/jquery.scrollTo.min.js' %}"></script>
+
+</body>
+</html>

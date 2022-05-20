@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+{% load socialaccount %}
+
+<html>
+<head>
+  <title>Đăng nhập</title>
+<link rel="stylesheet" href="{% static 'dangnhapdangky/css/DK.css' %}">
+<body>
+<h2>Đăng nhập</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="{% url 'MemberUser:registerUser' %}" method="post">
+                {% csrf_token %}
+                {{rF}}
+                <h1>Tạo tài khoản</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>Sử dụng email nếu bạn quên mật khẩu</span>
+                <input type="text" placeholder="username" />
+                <input type="email" placeholder="email" />
+                <input type="password" placeholder="password" />
+                <button>Đăng ký</button>
+
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="{% url 'MemberUser:loginUser' %}" method="post">
+                <p>Tài khoản của bạn</p>
+
+                {% csrf_token %}
+                {{lF}}
+                <div class="social-container">
+
+                    <a href="{% provider_login_url 'google' %}" class="social"><i class="fab fa-google-plus-g"></i></a>
+
+                </div>
+
+                <a href="http://127.0.0.1:8000/register/"><p>Bạn chưa có tài khoản</p></a>
+                <!--<input type="text" placeholder="username" />
+                <input type="password" placeholder="password" />
+                <a href="#">Bạn quên mật khẩu</a>-->
+                <a href="#"><button>Đăng nhập</button></a>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Chào mừng trở lại!</h1>
+                    <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Chào mừng trở lại!</h1>
+                    <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        //signUpButton.addEventListener('click', () => {
+        //    container.classList.add('right-panel-active');
+        //});
+
+        //signInButton.addEventListener('click', () => {
+        //    container.classList.remove('right-panel-active');
+        //});
+</script>
+</body>
+</html>

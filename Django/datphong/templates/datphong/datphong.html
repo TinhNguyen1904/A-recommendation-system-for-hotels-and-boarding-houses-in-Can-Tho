@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Đặt phòng khách sạn</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'datphong/distND/pickmeup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'datphong/distND/handleCounter.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'datphong/cssND/pickmeup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'datphong/cssND/handle-counter.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'datphong/cssND/main.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'datphong/distND/jquery.scrollUp.js' %}"></script>
+    <script type="text/javascript" src="{% static 'datphong/distND/demo.js' %}"></script>
+
+
+
+    </head>
+
+<body>
+    <header class="tm-header">
+       <nav class="tm-nav">
+       <div>
+            <h1>{{Hotel.hotel_name}}</h1>
+			<p>{{Hotel.hotel_address}}</p>
+        </div>
+        </nav>
+    </header>
+
+
+    <section class="tm-main">
+           <p>ĐẶT PHÒNG</p>
+    </section>
+
+
+
+    <section class="tm-booking">
+
+    <form>
+        <div class="tm-form1">
+    <input type="text" name="name" placeholder="Họ tên">
+    <input type="email" name="phone" placeholder="Số điện thoại">
+
+    <label  for="rooms" id="inlinelable">Phòng</label>
+    <select name="Rooms" id="rooms">
+        <option value="luxurys">Phòng VIP</option>
+        <option value="deluxs">Phòng sang trọng</option>
+        <option value="premiers">Phòng bình dân</option>
+    </select>
+
+    <div class="tm-num1" id="handleCounter1">
+    <label for="number1" >Số phòng</label><br/>
+        <button type="button" class="counter-minus btn btn-primary">- </button>
+        <input type="text" name="number1" id="number1" value="1">
+         <button type="button" class="counter-plus btn btn-primary">+  </button>
+        </div>
+    <div class="tm-num2" id="handleCounter2">
+        <label for="number2">Số người ở</label><br/>
+        <button type="button" class="counter-minus btn btn-primary">-</button>
+        <input type="text" name="number2" id="number2" value="1">
+            <button type="button" class="counter-plus btn btn-primary">+</button>
+            </div>
+
+
+
+
+
+    </div>
+
+        <div class="vertical-line"> </div>
+
+    <div class="tm-form2">
+   <div class="tm-cl">
+        <label for="date1" class="arrival">Thời gian đặt phòng</label>
+        <input type="text" name="date1" class="range" readonly="readonly">
+        <input type="submit" id="sub" value="Proceed">
+    </div>
+    </div>
+        </form>
+  </section>
+
+
+    <footer class="tm-footer">
+        <div class="tm-us">
+        <p class="bold">Về chúng tôi</p>
+        <p>Chúng tôi là một phần của chuỗi khách sạn sang trọng
+             ở Cần Thơ. chúng tôi cung cấp một kỳ nghỉ sang trọng
+			 với nhiều giá trị khác nhau các dịch vụ bổ sung
+			 và miễn phí sẽ tạo ra bạn ghé thăm chúng tôi hơn và hơn nữa.</p>
+        </div>
+
+        <div class="tm-address">
+        <p class="bold">Địa chỉ</p>
+        <p>Cần Thơ, Việt Nam
+            Phone : 02926 254 567
+            Email : internationalhotelvn@gmail.com</p>
+        </div>
+        <br/>
+    <div class="tm-media">
+        <a href="#"> <img src="{% static 'datphong/images/fb.png' %}"></a>
+        <a href="#"> <img src="{% static 'datphong/images/G.png' %}"> </a>
+        <a href="#"> <img src="{% static 'datphong/images/twittr.png' %}"> </a>
+        <a href="#">  <img src="{% static 'datphong/images/insta.png' %}"> </a>
+
+        </div>
+<!--        <a href="#">  <img class="tm-up" src="images/up.png"> </a>-->
+    </footer>
+
+
+
+    </body>
+
+</html>
